@@ -31,10 +31,10 @@ var idolSchema = new Schema({
         type: Number,
         default: -1
     },
-    services:{
+    services:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref:'Tag'
-    },
+        ref: 'Tag'
+    }],
     note: String,
     private_info:{
         real_name: String,

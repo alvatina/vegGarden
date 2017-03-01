@@ -10,6 +10,12 @@ router.get('/', function (req, res, next) {
         return next(data);
     })
 });
+router.get('/:id', function (req, res, next) {
+    Area.findById(req.params.id, function (err, data) {
+        if(err) return next(err);
+        return next(data);
+    })
+});
 router.post('/', function (req, res, next) {
     var tag = new Area({
         name: req.body.name,
